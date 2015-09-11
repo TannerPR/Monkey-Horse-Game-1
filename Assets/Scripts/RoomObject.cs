@@ -4,10 +4,15 @@ using System.Collections;
 
 public class RoomObject : PlayerItem, IObjectInteraction
 {
+    [SerializeField]
+    private float m_InteractionRange = 0.5f;
+    public float InteractionRange { get { return m_InteractionRange; } }
 
     [SerializeField]
-    private float m_PickUpDistance = 0.5f;
-    public float PickUpDistance { get { return m_PickUpDistance; } }
+    private Collider m_Collider;
+
+    [SerializeField]
+    private Rigidbody m_RigidBody;
 
     private bool m_UsedByPlayer = false;
     public bool UsedByPlayer { get { return m_UsedByPlayer; } }
@@ -15,7 +20,21 @@ public class RoomObject : PlayerItem, IObjectInteraction
 	// Use this for initialization
 	void Start ()
     {
-	    
+        if (m_Collider == null)
+        {
+            Debug.Log("Please set non-trigger collider on RoomObject " + GetInstanceID());
+            this.enabled = false;
+        }
+
+        if (m_RigidBody == null)
+        {
+            m_RigidBody = GetComponent<Rigidbody>();
+            if (m_RigidBody == null)
+            {
+                Debug.Log("Cannot find rigidbody on RoomObject " + GetInstanceID());
+                this.enabled = false;
+            }
+        }
 	}
 	
 	// Update is called once per frame
@@ -32,18 +51,23 @@ public class RoomObject : PlayerItem, IObjectInteraction
 
     void OnTriggerEnter(Collider aCollider)
     {
-        // check if sender is player, if so
-        ActivatedByPlayer();
+        if (m_UsedByPlayer == true) { return; }
 
-        // call some function on player which tells it what to make visible
-        // something like player.MakeVisible(ItemID m_ItemID);
-        Debug.Log("now imagine that this is on the player.");
+        // check if its the player
+        PlayerControl playerCon = aCollider.GetComponent<PlayerControl>();
+        if (playerCon == false) { return; }
+
+        ActivatedByPlayer(playerCon);
+
     }
 
-    private void ActivatedByPlayer()
+    private void ActivatedByPlayer(PlayerControl aPlayerControl)
     {
         m_UsedByPlayer = true;
         ToggleObject(m_UsedByPlayer);
+
+        // call some function on player which tells it what to make visible
+        aPlayerControl.SetItemVisibility(ItemID);
     }
 
     private void ToggleObject(bool aCurrentState)
@@ -52,32 +76,29 @@ public class RoomObject : PlayerItem, IObjectInteraction
         SetObjectCollision(!aCurrentState);
     }
 
-    private void SetObjectVisibility(bool aState)
+    private void SetObjectVisibility(bool aVisible)
     {
-        MakeVisible(aState);
+        MakeVisible(aVisible);
     }
 
-    private void SetObjectCollision(bool aState)
+    private void SetObjectCollision(bool aDoCollision)
     {
-        if (aState)
-        {
-            // enable any collision
-        }
-        else
-        {
-            // disable any collision
-        }
+        m_RigidBody.useGravity = aDoCollision;
+        m_Collider.enabled = aDoCollision;
     }
 
     #region INTERFACE
     public void OnInteraction(GameObject aPlayer)
     {
-        // check if sender is player, if so
-        ActivatedByPlayer();
+        //check range
+        float distSqrd = (transform.position - aPlayer.transform.position).sqrMagnitude;
+        if (distSqrd > m_InteractionRange) { return; }
 
-        // call some function on player which tells it what to make visible
-        // something like player.MakeVisible(ItemID m_ItemID);
-        Debug.Log("now imagine that this is on the player.");
+        // check if its the player
+        PlayerControl playerCon = aPlayer.GetComponent<PlayerControl>();
+        if (playerCon == false) { return; }
+
+        ActivatedByPlayer(playerCon);
     }
     #endregion
 }

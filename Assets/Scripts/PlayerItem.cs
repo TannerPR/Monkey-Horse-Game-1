@@ -11,20 +11,17 @@ public class PlayerItem : MonoBehaviour
     {
         if (m_ItemID == ItemID.UNINITIALIZED)
         {
-            Debug.Log("Did not set ItemID enum on " + gameObject.GetInstanceID());
+            Debug.Log("Did not set ItemID enum on PlayerItem " + GetInstanceID());
         }
     }
 
     public void MakeVisible(bool aVisible)
     {
-        if (aVisible)
+        Renderer rend = GetComponent<Renderer>();
+        if (null != rend)
         {
-            // turn on render
+            rend.enabled = aVisible;
         }
-        else
-        {
-            // turn off renderer
-        }
-        
     }
+
 }
