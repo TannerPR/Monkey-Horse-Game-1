@@ -8,7 +8,12 @@ public class RoomObject : MonoBehaviour, IObjectInteraction
     private ItemID m_ItemID = ItemID.UNINITIALIZED;
     public ItemID ItemID { get { return m_ItemID; } }
 
+    [SerializeField]
+    private float m_PickUpDistance = 0.5f;
+    public float PickUpDistance { get { return m_PickUpDistance; } }
+
     private bool m_UsedByPlayer = false;
+    public bool UsedByPlayer { get { return m_UsedByPlayer; } }
 
 	// Use this for initialization
 	void Start ()
@@ -26,6 +31,16 @@ public class RoomObject : MonoBehaviour, IObjectInteraction
     {
         m_UsedByPlayer = false;
         ToggleObject(m_UsedByPlayer);
+    }
+
+    void OnTriggerEnter(Collider aCollider)
+    {
+        // check if sender is player, if so
+        ActivatedByPlayer();
+
+        // call some function on player which tells it what to make visible
+        // something like player.MakeVisible(ItemID m_ItemID);
+        Debug.Log("now imagine that this is on the player.");
     }
 
     private void ActivatedByPlayer()
