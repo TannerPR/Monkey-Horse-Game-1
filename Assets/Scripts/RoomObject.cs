@@ -32,7 +32,6 @@ public class RoomObject : MonoBehaviour, IObjectInteraction
     {
         m_UsedByPlayer = true;
         ToggleObject(m_UsedByPlayer);
-        Debug.Log("now imagine that this is on the player.");
     }
 
     private void ToggleObject(bool aCurrentState)
@@ -70,6 +69,10 @@ public class RoomObject : MonoBehaviour, IObjectInteraction
     {
         // check if sender is player, if so
         ActivatedByPlayer();
+
+        // call some function on player which tells it what to make visible
+        // something like player.MakeVisible(ItemID m_ItemID);
+        Debug.Log("now imagine that this is on the player.");
     }
     #endregion
 }
