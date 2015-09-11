@@ -2,11 +2,8 @@
 using System.Collections;
 
 
-public class RoomObject : MonoBehaviour, IObjectInteraction
+public class RoomObject : PlayerItem, IObjectInteraction
 {
-    [SerializeField]
-    private ItemID m_ItemID = ItemID.UNINITIALIZED;
-    public ItemID ItemID { get { return m_ItemID; } }
 
     [SerializeField]
     private float m_PickUpDistance = 0.5f;
@@ -57,14 +54,7 @@ public class RoomObject : MonoBehaviour, IObjectInteraction
 
     private void SetObjectVisibility(bool aState)
     {
-        if (aState)
-        {
-            // enable any renderer
-        }
-        else
-        {
-            // disable any renderer
-        }
+        MakeVisible(aState);
     }
 
     private void SetObjectCollision(bool aState)
