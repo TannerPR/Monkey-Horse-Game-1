@@ -1,77 +1,15 @@
 fileFormatVersion: 2
-guid: 4bde4d1764c608f4ba51c65d08e6efe9
-timeCreated: 1441955131
+guid: ac4cd9912d62aaf4dbbe0434592030f5
+timeCreated: 1441997342
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Head'
-    100002: LeftArm
-    100004: LeftElbow
-    100006: LeftFoot
-    100008: LeftHips
-    100010: LeftKnee
-    100012: MiddleSpine
-    100014: Pelvis
-    100016: //RootNode
-    100018: RightArm
-    100020: RightElbow
-    100022: RightFoot
-    100024: RightHips
-    100026: RightKnee
-    400000: Head'
-    400002: LeftArm
-    400004: LeftElbow
-    400006: LeftFoot
-    400008: LeftHips
-    400010: LeftKnee
-    400012: MiddleSpine
-    400014: Pelvis
-    400016: //RootNode
-    400018: RightArm
-    400020: RightElbow
-    400022: RightFoot
-    400024: RightHips
-    400026: RightKnee
-    2300000: Head'
-    2300002: LeftArm
-    2300004: LeftElbow
-    2300006: LeftFoot
-    2300008: LeftHips
-    2300010: LeftKnee
-    2300012: MiddleSpine
-    2300014: Pelvis
-    2300016: RightArm
-    2300018: RightElbow
-    2300020: RightFoot
-    2300022: RightHips
-    2300024: RightKnee
-    3300000: Head'
-    3300002: LeftArm
-    3300004: LeftElbow
-    3300006: LeftFoot
-    3300008: LeftHips
-    3300010: LeftKnee
-    3300012: MiddleSpine
-    3300014: Pelvis
-    3300016: RightArm
-    3300018: RightElbow
-    3300020: RightFoot
-    3300022: RightHips
-    3300024: RightKnee
-    4300000: RightElbow
-    4300002: RightArm
-    4300004: LeftElbow
-    4300006: LeftArm
-    4300008: Head'
-    4300010: MiddleSpine
-    4300012: Pelvis
-    4300014: RightKnee
-    4300016: LeftKnee
-    4300018: RightHips
-    4300020: LeftHips
-    4300022: RightFoot
-    4300024: LeftFoot
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Object002
   materials:
     importMaterials: 1
     materialName: 0
