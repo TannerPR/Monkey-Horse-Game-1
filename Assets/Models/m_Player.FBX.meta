@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: c728a58d93b7ff24c9ea1cac89726128
+timeCreated: 1442000406
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: m_BackPack
+    100002: m_Hat
+    100004: m_Human
+    100006: m_Pants
+    100008: //RootNode
+    100010: m_Shirt
+    100012: m_Shoes
+    100014: m_Underwear
+    100016: Object001
+    100018: d_Head
+    100020: d_LeftElbow
+    100022: d_LeftFoot
+    100024: d_LeftForeArm
+    100026: d_LeftKnee
+    100028: d_LeftThigh
+    100030: d_MiddleSpine
+    100032: d_Pelvis
+    100034: d_RightElbow
+    100036: d_RightFoot
+    100038: d_RightForeArm
+    100040: d_RightKnee
+    100042: d_RightThigh
+    400000: m_BackPack
+    400002: m_Hat
+    400004: m_Human
+    400006: m_Pants
+    400008: //RootNode
+    400010: m_Shirt
+    400012: m_Shoes
+    400014: m_Underwear
+    400016: Object001
+    400018: d_Head
+    400020: d_LeftElbow
+    400022: d_LeftFoot
+    400024: d_LeftForeArm
+    400026: d_LeftKnee
+    400028: d_LeftThigh
+    400030: d_MiddleSpine
+    400032: d_Pelvis
+    400034: d_RightElbow
+    400036: d_RightFoot
+    400038: d_RightForeArm
+    400040: d_RightKnee
+    400042: d_RightThigh
+    2300000: m_BackPack
+    2300002: m_Hat
+    2300004: m_Human
+    2300006: m_Pants
+    2300008: m_Shirt
+    2300010: m_Shoes
+    2300012: m_Underwear
+    2300014: Object001
+    3300000: m_BackPack
+    3300002: m_Hat
+    3300004: m_Human
+    3300006: m_Pants
+    3300008: m_Shirt
+    3300010: m_Shoes
+    3300012: m_Underwear
+    3300014: Object001
+    4300000: m_Human
+    4300002: m_Underwear
+    4300004: m_Pants
+    4300006: m_Shoes
+    4300008: m_Shirt
+    4300010: m_Hat
+    4300012: m_BackPack
+    4300014: Object001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

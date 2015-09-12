@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: 1c3f5d01749adab4585916b03bb2e619
+timeCreated: 1442061292
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: m_BackPack
+    100002: m_Human
+    100004: m_Pants
+    100006: m_Shirt
+    100008: m_Shoes
+    100010: m_Underwear
+    100012: Marine
+    100014: MarineHead
+    100016: MarineLArmCollarbone
+    100018: MarineLArmForearm
+    100020: MarineLArmPalm
+    100022: MarineLArmUpperarm
+    100024: MarineLLegAnkle
+    100026: MarineLLegCalf
+    100028: MarineLLegPlatform
+    100030: MarineLLegThigh
+    100032: MarineLLegToe
+    100034: MarineNeck1
+    100036: MarineNeck2
+    100038: MarinePelvis
+    100040: MarineRAnkle
+    100042: MarineRCalf
+    100044: MarineRCollarbone
+    100046: MarineRForearm
+    100048: MarineRibcage
+    100050: MarineRPalm
+    100052: MarineRPlatform
+    100054: MarineRThigh
+    100056: MarineRToe
+    100058: MarineRUpperarm
+    100060: MarineSpine1
+    100062: MarineSpine2
+    100064: MarineSpine3
+    100066: MarineTail1
+    100068: MarineTail2
+    100070: Object001
+    100072: //RootNode
+    400000: m_BackPack
+    400002: m_Human
+    400004: m_Pants
+    400006: m_Shirt
+    400008: m_Shoes
+    400010: m_Underwear
+    400012: Marine
+    400014: MarineHead
+    400016: MarineLArmCollarbone
+    400018: MarineLArmForearm
+    400020: MarineLArmPalm
+    400022: MarineLArmUpperarm
+    400024: MarineLLegAnkle
+    400026: MarineLLegCalf
+    400028: MarineLLegPlatform
+    400030: MarineLLegThigh
+    400032: MarineLLegToe
+    400034: MarineNeck1
+    400036: MarineNeck2
+    400038: MarinePelvis
+    400040: MarineRAnkle
+    400042: MarineRCalf
+    400044: MarineRCollarbone
+    400046: MarineRForearm
+    400048: MarineRibcage
+    400050: MarineRPalm
+    400052: MarineRPlatform
+    400054: MarineRThigh
+    400056: MarineRToe
+    400058: MarineRUpperarm
+    400060: MarineSpine1
+    400062: MarineSpine2
+    400064: MarineSpine3
+    400066: MarineTail1
+    400068: MarineTail2
+    400070: Object001
+    400072: //RootNode
+    4300000: m_Human
+    4300002: m_Underwear
+    4300004: m_Pants
+    4300006: m_Shoes
+    4300008: m_Shirt
+    4300010: m_BackPack
+    4300012: Object001
+    9500000: //RootNode
+    13700000: m_BackPack
+    13700002: m_Human
+    13700004: m_Pants
+    13700006: m_Shirt
+    13700008: m_Shoes
+    13700010: m_Underwear
+    13700012: Object001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
