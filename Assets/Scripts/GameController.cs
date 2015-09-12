@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class GameController : MonoBehaviour
 {
     const string GROUND_LAYER_MASK = "Ground";
 
-
+    [SerializeField]
+    List<RoomObject> m_RoomObjects;
 
     [SerializeField]
     GameObject testObj;
@@ -173,5 +174,20 @@ public class GameController : MonoBehaviour
         }
 
         return null;
+    }
+
+    public RoomObject[] GetAllUsedRoomObjects()
+    {
+        List<RoomObject> usedObjects = new List<RoomObject>();
+
+        for (int i = 0; i < m_RoomObjects.Count; i++)
+        {
+            if (m_RoomObjects[i] != null && m_RoomObjects[i].UsedByPlayer)
+            {
+                usedObjects.Add(m_RoomObjects[i]);
+            }
+        }
+
+        return usedObjects.ToArray();
     }
 }
