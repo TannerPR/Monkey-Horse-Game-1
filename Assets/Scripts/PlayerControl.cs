@@ -2,15 +2,37 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerControl : MonoBehaviour
+public class PlayerControl : MonoBehaviour, IObjectInteraction
 {
     [SerializeField]
     private PlayerItem[] m_PlayerItems;
+
+    [SerializeField]
+    private Rigidbody m_RigidBody;
+
+    [SerializeField]
+    private float m_FlingForceMultiplier = 1.0f;
+
+    [SerializeField]
+    private float m_MaxFlingForce = 10.0f;
 
 	// Use this for initialization
 	void Start () 
     {
         SetAllItemVisibility(false);
+
+        if (m_RigidBody == null)
+        {
+            m_RigidBody = GetComponent<Rigidbody>();
+            if (m_RigidBody == null)
+            {
+                Debug.Log("Cannot find rigidbody on PLayerControl " + GetInstanceID());
+                this.enabled = false;
+                return;
+            }
+        }
+
+        m_RigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 	}
 
 	// Update is called once per frame
@@ -80,4 +102,15 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    public void ApplyFling(Vector3 aForceDirection, float aForcePower)
+    {
+        float force = Mathf.Clamp(aForcePower * m_FlingForceMultiplier, 0.0f, m_MaxFlingForce);
+        m_RigidBody.AddForce(aForceDirection * force, ForceMode.Impulse);
+    }
+
+
+    public void OnInteraction(GameObject aPlayer)
+    {
+        // do nothing :P
+    }
 }

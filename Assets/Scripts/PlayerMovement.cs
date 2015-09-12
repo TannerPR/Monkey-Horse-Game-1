@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+#if WE_TESTING
     [SerializeField]
     private CharacterController m_Controller;
 
@@ -35,4 +35,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 localMoveDir = Input.GetAxis("Vertical") * transform.forward;
         m_Controller.Move(localMoveDir * Time.deltaTime * m_MoveSpeed);
     }
+#else
+
+#endif
 }
