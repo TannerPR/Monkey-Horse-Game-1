@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e0e27d93a0e7df742b38e65211ec657e
-timeCreated: 1442140511
+guid: 941a6adb8f993bd47ae72b2c37d52503
+timeCreated: 1442149689
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Object003
-    4300002: BedroomDoor
+    4300000: BedroomOuterWall
   materials:
     importMaterials: 1
     materialName: 0
