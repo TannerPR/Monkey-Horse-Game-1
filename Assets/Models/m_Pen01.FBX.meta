@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9710e20d8f504c841bb92d245be78e3e
-timeCreated: 1441989893
+guid: 38137268cd4df00498abc401fcfaf0eb
+timeCreated: 1442140509
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Box006
+    4300000: Pen05
   materials:
     importMaterials: 1
     materialName: 0

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 136f1e92c4c8a0b4b8e9240249f2c08d
-timeCreated: 1441902359
+guid: 2ce49981ea14cf44e83d0a3f371191a5
+timeCreated: 1442140509
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: DresserDoor02
+    4300000: DresserDoor03
   materials:
     importMaterials: 1
     materialName: 0

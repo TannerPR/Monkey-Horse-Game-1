@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 47a9e136590a3264f86ffd57dad65602
-timeCreated: 1441998841
+guid: 6f9ecea19f9c45d4596e05adab15395f
+timeCreated: 1442140509
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Object003
+    4300000: Pen04
   materials:
     importMaterials: 1
     materialName: 0

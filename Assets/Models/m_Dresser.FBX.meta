@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: ac4cd9912d62aaf4dbbe0434592030f5
-timeCreated: 1441997342
+guid: b39d326e53b95cf4484cb4219a7db6b6
+timeCreated: 1442140510
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Object002
+    4300000: Dresser
   materials:
     importMaterials: 1
     materialName: 0

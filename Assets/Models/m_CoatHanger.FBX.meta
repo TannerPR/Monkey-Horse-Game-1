@@ -1,34 +1,15 @@
 fileFormatVersion: 2
-guid: 1c222eaf2e2d66247ae4ad8dc118ee3d
-timeCreated: 1442093237
+guid: d65d2a3dffdad644c99be821f712d86a
+timeCreated: 1442140510
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Bone001
-    100004: Bone002
-    100006: Bone003
-    100008: Plane001
-    100010: Plane002
-    100012: Box001
     400000: //RootNode
-    400002: Bone001
-    400004: Bone002
-    400006: Bone003
-    400008: Plane001
-    400010: Plane002
-    400012: Box001
-    2300000: Plane002
-    2300002: //RootNode
-    3300000: Plane002
-    3300002: //RootNode
-    4300000: Plane001
-    4300002: Plane002
-    4300004: Box001
-    9500000: //RootNode
-    13700000: Plane001
-    13700002: Box001
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cylinder001
   materials:
     importMaterials: 1
     materialName: 0
@@ -86,7 +67,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -1,15 +1,21 @@
 fileFormatVersion: 2
-guid: bf9cbd19ff7ad19448c2ad40945d273d
-timeCreated: 1441995695
+guid: eba131d1d9c11b14ea3ed698c1d26a11
+timeCreated: 1442140511
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: LaptopBottom
+    100000: Bone001
+    100002: Bone002
+    100004: Box001
+    100006: //RootNode
+    400000: Bone001
+    400002: Bone002
+    400004: Box001
+    400006: //RootNode
+    4300000: Box001
+    9500000: //RootNode
+    13700000: Box001
   materials:
     importMaterials: 1
     materialName: 0
@@ -67,7 +73,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 
   assetBundleName: 

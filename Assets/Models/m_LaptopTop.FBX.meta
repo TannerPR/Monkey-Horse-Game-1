@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 898461348e739ed4893134c626aae9ee
-timeCreated: 1441901890
+guid: 328163e213d5224479ae1d254d80351f
+timeCreated: 1442140509
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Room
+    4300000: LaptopTop
   materials:
     importMaterials: 1
     materialName: 0

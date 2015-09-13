@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: cfb945fa36206a4408437f306303f660
-timeCreated: 1441995695
+guid: e0e27d93a0e7df742b38e65211ec657e
+timeCreated: 1442140511
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: CupHolder
+    4300000: Object003
   materials:
     importMaterials: 1
     materialName: 0

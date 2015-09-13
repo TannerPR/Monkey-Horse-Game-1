@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b5eec544a0abce942bc4286817dc8be8
-timeCreated: 1441902385
+guid: 020679509a71fc94586a70ad81720eb5
+timeCreated: 1442140509
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: ClosetDooLeft
+    4300000: ClosetDooRight
   materials:
     importMaterials: 1
     materialName: 0

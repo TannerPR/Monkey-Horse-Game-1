@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1c3f5d01749adab4585916b03bb2e619
-timeCreated: 1442061292
+guid: 1a38c5f615976ca4ba4396e3628d297f
+timeCreated: 1442140509
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -8,77 +8,77 @@ ModelImporter:
     100000: m_BackPack
     100002: m_Human
     100004: m_Pants
-    100006: m_Shirt
-    100008: m_Shoes
-    100010: m_Underwear
-    100012: Marine
-    100014: MarineHead
-    100016: MarineLArmCollarbone
-    100018: MarineLArmForearm
-    100020: MarineLArmPalm
-    100022: MarineLArmUpperarm
-    100024: MarineLLegAnkle
-    100026: MarineLLegCalf
-    100028: MarineLLegPlatform
-    100030: MarineLLegThigh
-    100032: MarineLLegToe
-    100034: MarineNeck1
-    100036: MarineNeck2
-    100038: MarinePelvis
-    100040: MarineRAnkle
-    100042: MarineRCalf
-    100044: MarineRCollarbone
-    100046: MarineRForearm
-    100048: MarineRibcage
-    100050: MarineRPalm
-    100052: MarineRPlatform
-    100054: MarineRThigh
-    100056: MarineRToe
-    100058: MarineRUpperarm
-    100060: MarineSpine1
-    100062: MarineSpine2
-    100064: MarineSpine3
-    100066: MarineTail1
-    100068: MarineTail2
-    100070: Object001
-    100072: //RootNode
+    100006: //RootNode
+    100008: m_Shirt
+    100010: m_Shoes
+    100012: m_Underwear
+    100014: Marine
+    100016: MarineHead
+    100018: MarineLArmCollarbone
+    100020: MarineLArmForearm
+    100022: MarineLArmPalm
+    100024: MarineLArmUpperarm
+    100026: MarineLLegAnkle
+    100028: MarineLLegCalf
+    100030: MarineLLegPlatform
+    100032: MarineLLegThigh
+    100034: MarineLLegToe
+    100036: MarineNeck1
+    100038: MarineNeck2
+    100040: MarinePelvis
+    100042: MarineRAnkle
+    100044: MarineRCalf
+    100046: MarineRCollarbone
+    100048: MarineRForearm
+    100050: MarineRibcage
+    100052: MarineRPalm
+    100054: MarineRPlatform
+    100056: MarineRThigh
+    100058: MarineRToe
+    100060: MarineRUpperarm
+    100062: MarineSpine1
+    100064: MarineSpine2
+    100066: MarineSpine3
+    100068: MarineTail1
+    100070: MarineTail2
+    100072: Object001
     400000: m_BackPack
     400002: m_Human
     400004: m_Pants
-    400006: m_Shirt
-    400008: m_Shoes
-    400010: m_Underwear
-    400012: Marine
-    400014: MarineHead
-    400016: MarineLArmCollarbone
-    400018: MarineLArmForearm
-    400020: MarineLArmPalm
-    400022: MarineLArmUpperarm
-    400024: MarineLLegAnkle
-    400026: MarineLLegCalf
-    400028: MarineLLegPlatform
-    400030: MarineLLegThigh
-    400032: MarineLLegToe
-    400034: MarineNeck1
-    400036: MarineNeck2
-    400038: MarinePelvis
-    400040: MarineRAnkle
-    400042: MarineRCalf
-    400044: MarineRCollarbone
-    400046: MarineRForearm
-    400048: MarineRibcage
-    400050: MarineRPalm
-    400052: MarineRPlatform
-    400054: MarineRThigh
-    400056: MarineRToe
-    400058: MarineRUpperarm
-    400060: MarineSpine1
-    400062: MarineSpine2
-    400064: MarineSpine3
-    400066: MarineTail1
-    400068: MarineTail2
-    400070: Object001
-    400072: //RootNode
+    400006: //RootNode
+    400008: m_Shirt
+    400010: m_Shoes
+    400012: m_Underwear
+    400014: Marine
+    400016: MarineHead
+    400018: MarineLArmCollarbone
+    400020: MarineLArmForearm
+    400022: MarineLArmPalm
+    400024: MarineLArmUpperarm
+    400026: MarineLLegAnkle
+    400028: MarineLLegCalf
+    400030: MarineLLegPlatform
+    400032: MarineLLegThigh
+    400034: MarineLLegToe
+    400036: MarineNeck1
+    400038: MarineNeck2
+    400040: MarinePelvis
+    400042: MarineRAnkle
+    400044: MarineRCalf
+    400046: MarineRCollarbone
+    400048: MarineRForearm
+    400050: MarineRibcage
+    400052: MarineRPalm
+    400054: MarineRPlatform
+    400056: MarineRThigh
+    400058: MarineRToe
+    400060: MarineRUpperarm
+    400062: MarineSpine1
+    400064: MarineSpine2
+    400066: MarineSpine3
+    400068: MarineTail1
+    400070: MarineTail2
+    400072: Object001
     4300000: m_Human
     4300002: m_Underwear
     4300004: m_Pants

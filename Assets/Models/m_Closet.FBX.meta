@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b593662489c3ec4499e759a9aa7afce9
-timeCreated: 1441902251
+guid: 80de3e77ddd0b1f4683b26e3e464499c
+timeCreated: 1442140510
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: DresserDoor03
+    4300000: Closet
   materials:
     importMaterials: 1
     materialName: 0

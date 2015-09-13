@@ -1,15 +1,19 @@
 fileFormatVersion: 2
-guid: 53834305fefd4214a9e706d8a88ff334
-timeCreated: 1441992053
+guid: 286435b6c2dd89a4ab9ef683e8ab3ed1
+timeCreated: 1442140509
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Room
+    100000: Bone001
+    100002: Box001
+    100004: //RootNode
+    400000: Bone001
+    400002: Box001
+    400004: //RootNode
+    4300000: Box001
+    9500000: //RootNode
+    13700000: Box001
   materials:
     importMaterials: 1
     materialName: 0
@@ -67,7 +71,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
