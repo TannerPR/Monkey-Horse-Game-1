@@ -18,14 +18,15 @@ public class TextureTimer : MonoBehaviour
 	void Update ()
     {
         m_Timer++;
-        if (m_Timer > 45)
+        if (m_Timer > 100)
         {
             m_RandomOffset = new Vector2(Random.Range(0, 20), 
                                          Random.Range(0, 20));
             m_Renderer.material.SetTextureOffset("_MainTex", m_RandomOffset);
-            //m_Timer = 0;
+       
             Debug.Log(m_RandomOffset);
             Debug.Log(m_Timer);
+            m_Timer = 0;
         }
 	}
 
