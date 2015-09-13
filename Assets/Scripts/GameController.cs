@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField]
+    GameObject testObj;
+    
+    
     const string GROUND_LAYER_MASK = "Ground";
 
     [SerializeField]
-    List<RoomObject> m_RoomObjects;
-
-    [SerializeField]
-    GameObject testObj;
+    private List<RoomObject> m_RoomObjects;
 
     [SerializeField]
     private float m_RaycastDistance = 500.0f;
@@ -61,7 +62,8 @@ public class GameController : MonoBehaviour
                 IObjectInteraction objInt = objHit.GetComponent(typeof(IObjectInteraction)) as IObjectInteraction;
                 if (objInt != null)
                 {
-                    objInt.OnInteraction(m_Player);
+                    // removed to remove click activation of objects
+                    //objInt.OnInteraction(m_Player);
                     m_FocusedObj = objHit;
                 }
             }
@@ -123,7 +125,6 @@ public class GameController : MonoBehaviour
                     if (Physics.Raycast(ray.origin, ray.direction, out hit, m_RaycastDistance))
                     //if (Physics.Raycast(ray.origin, ray.direction, out hit, m_RaycastDistance, 1 << LayerMask.GetMask(GROUND_LAYER_MASK)))
                     {
-
                         Vector3 adjustedMousePosition = new Vector3(hit.point.x, m_FocusedObj.transform.position.y, hit.point.z);
                         Vector3 forceDir = m_FocusedObj.transform.position - adjustedMousePosition;
                         Debug.Log("adjustedMouse " + adjustedMousePosition + "\nforceDir " + forceDir);
@@ -148,12 +149,12 @@ public class GameController : MonoBehaviour
         }
     }
 
-
+    // maybe dotn even need this anymore?
     private void HandleHeldObject()
     {
         if (m_ObjectHeld)
         {
-            Ray ray = m_MainCamera.ScreenPointToRay(Input.mousePosition);
+            //Ray ray = m_MainCamera.ScreenPointToRay(Input.mousePosition);
             //Vector3 mousePos = ray.;
         }
     }
