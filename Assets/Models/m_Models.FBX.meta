@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 574567998f93ea44bafa5f74a4212ded
+timeCreated: 1442151508
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: BedBottom
+    100002: BedPosts
+    100004: BedroomDoor
+    100006: BedroomFloor
+    100008: BedroomOuterWall
+    100010: BedTop
+    100012: Closet
+    100014: ClosetDooLeft
+    100016: ClosetDooRight
+    100018: Dresser
+    100020: DresserDoor01
+    100022: DresserDoor02
+    100024: DresserDoor03
+    100026: LaptopBottom
+    100028: //RootNode
+    100030: Object002
+    100032: Object003
+    100034: Object004
+    100036: Pen02
+    100038: Room
+    400000: BedBottom
+    400002: BedPosts
+    400004: BedroomDoor
+    400006: BedroomFloor
+    400008: BedroomOuterWall
+    400010: BedTop
+    400012: Closet
+    400014: ClosetDooLeft
+    400016: ClosetDooRight
+    400018: Dresser
+    400020: DresserDoor01
+    400022: DresserDoor02
+    400024: DresserDoor03
+    400026: LaptopBottom
+    400028: //RootNode
+    400030: Object002
+    400032: Object003
+    400034: Object004
+    400036: Pen02
+    400038: Room
+    2300000: BedBottom
+    2300002: BedPosts
+    2300004: BedroomDoor
+    2300006: BedroomFloor
+    2300008: BedroomOuterWall
+    2300010: BedTop
+    2300012: Closet
+    2300014: ClosetDooLeft
+    2300016: ClosetDooRight
+    2300018: Dresser
+    2300020: DresserDoor01
+    2300022: DresserDoor02
+    2300024: DresserDoor03
+    2300026: LaptopBottom
+    2300028: Object002
+    2300030: Object003
+    2300032: Object004
+    2300034: Pen02
+    2300036: Room
+    3300000: BedBottom
+    3300002: BedPosts
+    3300004: BedroomDoor
+    3300006: BedroomFloor
+    3300008: BedroomOuterWall
+    3300010: BedTop
+    3300012: Closet
+    3300014: ClosetDooLeft
+    3300016: ClosetDooRight
+    3300018: Dresser
+    3300020: DresserDoor01
+    3300022: DresserDoor02
+    3300024: DresserDoor03
+    3300026: LaptopBottom
+    3300028: Object002
+    3300030: Object003
+    3300032: Object004
+    3300034: Pen02
+    3300036: Room
+    4300000: BedPosts
+    4300002: Room
+    4300004: Dresser
+    4300006: Closet
+    4300008: DresserDoor03
+    4300010: DresserDoor01
+    4300012: DresserDoor02
+    4300014: ClosetDooRight
+    4300016: ClosetDooLeft
+    4300018: Pen02
+    4300020: LaptopBottom
+    4300022: Object002
+    4300024: Object003
+    4300026: BedBottom
+    4300028: BedTop
+    4300030: BedroomFloor
+    4300032: BedroomDoor
+    4300034: BedroomOuterWall
+    4300036: Object004
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
