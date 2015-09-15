@@ -56,7 +56,7 @@ public class GameController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject objHit = GetObjectUnderMouse(m_RaycastDistance);
-            Debug.Log("objhit is " + objHit.name);
+            //Debug.Log("objhit is " + objHit.name);
 
             if (objHit != null)
             {
@@ -129,7 +129,7 @@ public class GameController : MonoBehaviour
                     {
                         Vector3 adjustedMousePosition = new Vector3(hit.point.x, m_FocusedObj.transform.position.y, hit.point.z);
                         Vector3 forceDir = m_FocusedObj.transform.position - adjustedMousePosition;
-                        Debug.Log("adjustedMouse " + adjustedMousePosition + "\nforceDir " + forceDir);
+                        //Debug.Log("adjustedMouse " + adjustedMousePosition + "\nforceDir " + forceDir);
                         playerCon.ApplyFling(forceDir.normalized, forceDir.sqrMagnitude);
                     }
                     else

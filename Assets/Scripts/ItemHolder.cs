@@ -17,10 +17,18 @@ public class ItemHolder : MonoBehaviour, IObjectInteraction
     [SerializeField]
     private float m_KnockBackPlayerForce = 2.0f;
 
+    [SerializeField]
+    private MonoBehaviour m_TypeSpecificBehaviour;
+    private IObjectHolder m_OnReleaseBehaviour;
+
+    [SerializeField]
+    private bool m_Activated = false;
+
+
 	// Use this for initialization
 	void Start () 
     {
-	    
+        m_OnReleaseBehaviour = m_TypeSpecificBehaviour as IObjectHolder;
 	}
 	
 	// Update is called once per frame
@@ -31,14 +39,23 @@ public class ItemHolder : MonoBehaviour, IObjectInteraction
 
     void OnCollisionEnter(Collision aCollision)
     {
+        if (m_Activated) { return; }
+
         //PlayerControl playerControl = aCollision.gameObject.GetComponent<PlayerControl>();
         PlayerControl playerControl = aCollision.transform.root.GetComponent<PlayerControl>();
 
         if (playerControl == null) { return; }
 
+        m_Activated = true;
+
         if (m_KnockBackPlayer)
         {
             KnockBackPlayer(playerControl);
+        }
+
+        if (m_OnReleaseBehaviour != null)
+        {
+            m_OnReleaseBehaviour.OnObjectRelease();
         }
 
         ReleaseItems();
@@ -61,8 +78,8 @@ public class ItemHolder : MonoBehaviour, IObjectInteraction
             {
                 m_ItemsHeld[i].RevealObject();
 
-                //Vector3 forceDirection = gameObject.transform.forward/
-                Vector3 forceDirection = gameObject.transform.right;
+                Vector3 forceDirection = gameObject.transform.forward;
+                //Vector3 forceDirection = gameObject.transform.right;
 
                 //randomize directoin
                 float angleRadians = UnityEngine.Random.Range(1.0f, 2.0f * Mathf.PI);
@@ -86,8 +103,8 @@ public class ItemHolder : MonoBehaviour, IObjectInteraction
 
     private void KnockBackPlayer(PlayerControl aPlayer)
     {
-        aPlayer.ApplyFling(gameObject.transform.right, m_KnockBackPlayerForce);
-        //aPlayer.ApplyFling(gameObject.transform.forward, m_KnockBackPlayerForce);
+        //aPlayer.ApplyFling(gameObject.transform.right, m_KnockBackPlayerForce);
+        aPlayer.ApplyFling(gameObject.transform.forward, m_KnockBackPlayerForce);
     }
 
     public void OnInteraction(GameObject aPlayer)
