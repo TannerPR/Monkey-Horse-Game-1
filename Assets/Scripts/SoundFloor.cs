@@ -12,31 +12,23 @@ public class SoundFloor : MonoBehaviour {
         
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     void OnCollisionEnter(Collision other)
     {
-        PlayerControl m_PlayerControl = transform.root.GetComponent<PlayerControl>();
-        if (m_PlayerControl == null)
-        {
-            return;
-        }
-        if (m_AudioSource != null && m_AudioSource.clip != null)
-        {
-            m_AudioSource.PlayOneShot(m_Impact);
-
-        }
-        if (other.transform.root.GetComponent<PlayerControl>())
-        {
-            Debug.Log("PlayerLanded");
-        }
-
-        if (other.transform.tag == "m_TeddyBear")
-        {
-            Debug.Log("Turdylanded");
-        }
+        //PlayerControl m_PlayerControl = other.transform.root.GetComponent<PlayerControl>();
+        //if (m_PlayerControl == null)
+        //{
+        //    return;
+        //}
+        //
+        //if (other.transform.root.GetComponent<PlayerControl>())
+        //{
+        //    //if (m_AudioSource != null && m_AudioSource.clip != null)
+        //    //{
+        //    if (!m_AudioSource.isPlaying)
+        //    {
+        //        m_AudioSource.PlayOneShot(m_Impact);
+        //    }
+        //    //}
+        //}
     }
 }
