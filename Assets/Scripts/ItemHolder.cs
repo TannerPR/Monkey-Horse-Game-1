@@ -29,6 +29,22 @@ public class ItemHolder : MonoBehaviour, IObjectInteraction
 	
 	}
 
+    void OnCollisionEnter(Collision aCollision)
+    {
+        //PlayerControl playerControl = aCollision.gameObject.GetComponent<PlayerControl>();
+        PlayerControl playerControl = aCollision.transform.root.GetComponent<PlayerControl>();
+
+        if (playerControl == null) { return; }
+
+        if (m_KnockBackPlayer)
+        {
+            KnockBackPlayer(playerControl);
+        }
+
+        ReleaseItems();
+    }
+
+
     private void ReleaseItems()
     {
         if (m_ItemsHeld == null || m_ItemsHeld.Length < 1)
@@ -81,7 +97,8 @@ public class ItemHolder : MonoBehaviour, IObjectInteraction
         if (distSqrd > m_InteractionRange) { return; }
 
         // check if its the player
-        PlayerControl playerCon = aPlayer.GetComponent<PlayerControl>();
+        //PlayerControl playerCon = aPlayer.GetComponent<PlayerControl>();
+        PlayerControl playerCon = aPlayer.transform.root.GetComponent<PlayerControl>();
         if (playerCon == false) { return; }
 
         if (m_KnockBackPlayer)

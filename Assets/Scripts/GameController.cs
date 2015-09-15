@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class GameController : MonoBehaviour
 {
     [SerializeField]
-    GameObject testObj;
+    GameObject ClickTracker;
     
     
     const string GROUND_LAYER_MASK = "Ground";
@@ -56,10 +56,12 @@ public class GameController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject objHit = GetObjectUnderMouse(m_RaycastDistance);
+            Debug.Log("objhit is " + objHit.name);
 
             if (objHit != null)
             {
-                IObjectInteraction objInt = objHit.GetComponent(typeof(IObjectInteraction)) as IObjectInteraction;
+                //IObjectInteraction objInt = objHit.GetComponent(typeof(IObjectInteraction)) as IObjectInteraction;
+                IObjectInteraction objInt = objHit.transform.root.GetComponent(typeof(IObjectInteraction)) as IObjectInteraction;
                 if (objInt != null)
                 {
                     // removed to remove click activation of objects
@@ -115,8 +117,8 @@ public class GameController : MonoBehaviour
         {
             if (m_ObjectHeld)
             {
-                PlayerControl playerCon = m_FocusedObj.GetComponent<PlayerControl>();
-
+                //PlayerControl playerCon = m_FocusedObj.GetComponent<PlayerControl>();
+                PlayerControl playerCon = m_FocusedObj.transform.root.GetComponent<PlayerControl>();
                 if (playerCon != null)
                 {
                     Ray ray = m_MainCamera.ScreenPointToRay(Input.mousePosition);
@@ -166,9 +168,9 @@ public class GameController : MonoBehaviour
         if (Physics.Raycast(ray.origin, ray.direction, out hit, aRayDistance))
         {
             // testing location of clicks
-            if (testObj != null)
+            if (ClickTracker != null)
             {
-                testObj.transform.position = hit.point;
+                ClickTracker.transform.position = hit.point;
             }
 
             return hit.collider.gameObject;

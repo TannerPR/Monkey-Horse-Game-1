@@ -7,8 +7,11 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
     [SerializeField]
     private PlayerItem[] m_PlayerItems;
 
+    /// <summary>
+    /// This needs to be the rigidbody at the chest or perhaps pelvis (marine pelvis OR marine spine 3s)
+    /// </summary>
     [SerializeField]
-    private Rigidbody m_RigidBody;
+    private Rigidbody m_RigidBodyAtCenterOfMass;
 
     [SerializeField]
     private float m_FlingForceMultiplier = 1.0f;
@@ -21,18 +24,18 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
     {
         SetAllItemVisibility(false);
 
-        if (m_RigidBody == null)
+        if (m_RigidBodyAtCenterOfMass == null)
         {
-            m_RigidBody = GetComponent<Rigidbody>();
-            if (m_RigidBody == null)
+            //m_RigidBodyAtCenterOfMass = GetComponent<Rigidbody>();
+            if (m_RigidBodyAtCenterOfMass == null)
             {
                 Debug.Log("Cannot find rigidbody on PLayerControl " + GetInstanceID());
                 this.enabled = false;
                 return;
             }
         }
-
-        m_RigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        //lets try without contraints..
+        //m_RigidBodyAtCenterOfMass.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 	}
 
 	// Update is called once per frame
@@ -105,7 +108,7 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
     public void ApplyFling(Vector3 aForceDirection, float aForcePower)
     {
         float force = Mathf.Clamp(aForcePower * m_FlingForceMultiplier, 0.0f, m_MaxFlingForce);
-        m_RigidBody.AddForce(aForceDirection * force, ForceMode.Impulse);
+        m_RigidBodyAtCenterOfMass.AddForce(aForceDirection * force, ForceMode.Impulse);
     }
 
 

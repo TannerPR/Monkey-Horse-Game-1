@@ -73,7 +73,8 @@ public class RoomObject : PlayerItem, IObjectInteraction
         if (m_Hidden) { return; }
 
         // check if its the player
-        PlayerControl playerCon = aCollider.GetComponent<PlayerControl>();
+        //PlayerControl playerCon = aCollider.GetComponent<PlayerControl>();
+        PlayerControl playerCon = aCollider.transform.root.GetComponent<PlayerControl>();
         if (playerCon == false) { return; }
 
         ActivatedByPlayer(playerCon);
@@ -138,7 +139,8 @@ public class RoomObject : PlayerItem, IObjectInteraction
         if (distSqrd > m_InteractionRange) { return; }
 
         // check if its the player
-        PlayerControl playerCon = aPlayer.GetComponent<PlayerControl>();
+        //PlayerControl playerCon = aPlayer.GetComponent<PlayerControl>();
+        PlayerControl playerCon = aPlayer.transform.root.GetComponent<PlayerControl>();
         if (playerCon == false) { return; }
 
         ActivatedByPlayer(playerCon);
