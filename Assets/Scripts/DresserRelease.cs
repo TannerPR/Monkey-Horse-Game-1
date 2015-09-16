@@ -32,6 +32,7 @@ public class DresserRelease : MonoBehaviour, IObjectHolder
         }
     }
 
+
     public void OnObjectRelease()
     {
         Debug.Log("ON RELEASE BEHAVIOUR FROM DRESSER CALLED");
@@ -51,5 +52,12 @@ public class DresserRelease : MonoBehaviour, IObjectHolder
                 StartCoroutine(SlideForward(m_Drawers[i], speed, openTime));
             }
         }
+    }
+
+    public void Reset()
+    {
+        //reset doors and shit
+        //doors
+
     }
 }

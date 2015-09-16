@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
     [SerializeField]
     private PlayerItem[] m_PlayerItems;
 
+
     /// <summary>
     /// This needs to be the rigidbody at the chest or perhaps pelvis (marine pelvis OR marine spine 3s)
     /// </summary>
@@ -18,6 +19,9 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
 
     [SerializeField]
     private float m_MaxFlingForce = 10.0f;
+
+    [SerializeField]
+    private float m_MinFlingForce = 0.0f;
 
 	// Use this for initialization
 	void Start () 
@@ -107,7 +111,7 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
 
     public void ApplyFling(Vector3 aForceDirection, float aForcePower)
     {
-        float force = Mathf.Clamp(aForcePower * m_FlingForceMultiplier, 0.0f, m_MaxFlingForce);
+        float force = Mathf.Clamp(aForcePower * m_FlingForceMultiplier, m_MinFlingForce, m_MaxFlingForce);
         m_RigidBodyAtCenterOfMass.AddForce(aForceDirection * force, ForceMode.Impulse);
     }
 

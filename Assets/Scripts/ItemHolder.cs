@@ -25,6 +25,7 @@ public class ItemHolder : MonoBehaviour, IObjectInteraction
     private bool m_Activated = false;
 
 
+    
 	// Use this for initialization
 	void Start () 
     {
