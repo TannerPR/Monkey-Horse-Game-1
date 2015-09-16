@@ -32,8 +32,8 @@ public class GameController : MonoBehaviour
     private float m_MouseDownTimeToPickUpPassed = 0.0f;
 
 
-    //[SerializeField]
-    //private MonoBehaviour[] testingResetable;
+    [SerializeField]
+    private MonoBehaviour[] m_ResetableObjects;
 
 	// Use this for initialization
 	void Start ()
@@ -196,5 +196,35 @@ public class GameController : MonoBehaviour
         }
 
         return usedObjects.ToArray();
+    }
+
+    public void Reset()
+    {
+        //objects
+        if (m_ResetableObjects != null)
+        {
+            for (int i = 0; i < m_ResetableObjects.Length; i++)
+            {
+                if (m_ResetableObjects[i] != null)
+                {
+                    IResetable objReset = m_ResetableObjects[i] as IResetable;
+                    if (objReset != null)
+                    {
+                        objReset.OnReset();
+                    }
+                }
+            }
+        }
+        
+        //player
+        PlayerControl playerCon = m_Player.GetComponent<PlayerControl>();
+        if (playerCon != null)
+        {
+            IResetable playerReset = playerCon as IResetable;
+            if (playerReset != null)
+            {
+                playerReset.OnReset();
+            }
+        }
     }
 }
