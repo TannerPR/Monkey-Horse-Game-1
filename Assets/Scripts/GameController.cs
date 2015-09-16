@@ -31,6 +31,10 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private float m_MouseDownTimeToPickUpPassed = 0.0f;
 
+
+    //[SerializeField]
+    //private MonoBehaviour[] testingResetable;
+
 	// Use this for initialization
 	void Start ()
     {
