@@ -5,7 +5,7 @@ public class SoundCan : MonoBehaviour
 {
 
     // Use this for initialization
-    public AudioClip m_ImpactHard;
+    public AudioClip[] m_Impact = new AudioClip[5];
     private AudioSource m_AudioSource;
 
     void Start()
@@ -15,16 +15,17 @@ public class SoundCan : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        int rand = Random.Range(0, m_Impact.Length);
 
-        if (other.transform.tag == "floor" || other.transform.tag == "table" || other.transform.tag == "dresser")
+        if (other.transform.tag == "floor" || other.transform.tag == "grass" || other.transform.tag == "dresser")
         {
-            //if (m_AudioSource != null && m_AudioSource.clip != null)
-            //{
-            if (!m_AudioSource.isPlaying)
+            if (m_AudioSource != null)
             {
-                m_AudioSource.PlayOneShot(m_ImpactHard);
+                if (!m_AudioSource.isPlaying)
+                {
+                    m_AudioSource.PlayOneShot(m_Impact[rand]);
+                }
             }
-            //}
         }
     }
 }
