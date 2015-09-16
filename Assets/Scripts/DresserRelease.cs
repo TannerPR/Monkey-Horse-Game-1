@@ -52,4 +52,11 @@ public class DresserRelease : MonoBehaviour, IObjectHolder
             }
         }
     }
+
+    public void Reset()
+    {
+        //reset doors and shit
+        //doors
+
+    }
 }
