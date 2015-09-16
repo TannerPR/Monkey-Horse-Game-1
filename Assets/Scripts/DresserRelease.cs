@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class DresserRelease : MonoBehaviour, IObjectHolder
+public class DresserRelease : MonoBehaviour, IObjectHolder, IResetable
 {
     [SerializeField]
     private GameObject[] m_Drawers;
@@ -47,8 +47,27 @@ public class DresserRelease : MonoBehaviour, IObjectHolder
             aObject.transform.position += aObject.transform.forward * aSpeedOfSlide * Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
-    }
+    } 
 
+    private void Reset()
+    {
+        //reset doors and shit
+        if (m_Drawers == null || m_DrawerInitPositions == null || m_DrawerInitPositions.Length != m_Drawers.Length)
+        {
+            Debug.Log("m_Drawers is null or incompatibile with stored initial values for m_Drawers. Cannot initiate reset on DresserRelease " + GetInstanceID());
+            return;
+        }
+
+        //reset drawer position
+        for (int i = 0; i < m_Drawers.Length; i++)
+        {
+            if (m_Drawers[i] != null)
+            {
+                m_Drawers[i].transform.position = m_DrawerInitPositions[i];
+            }
+        }
+        
+    }
 
     public void OnObjectRelease()
     {
@@ -71,23 +90,8 @@ public class DresserRelease : MonoBehaviour, IObjectHolder
         }
     }
 
-    public void Reset()
+    public void OnReset()
     {
-        //reset doors and shit
-        if (m_Drawers == null || m_DrawerInitPositions == null || m_DrawerInitPositions.Length != m_Drawers.Length)
-        {
-            Debug.Log("m_Drawers is null or incompatibile with stored initial values for m_Drawers. Cannot initiate reset on DresserRelease " + GetInstanceID());
-            return;
-        }
-
-        //reset drawer position
-        for (int i = 0; i < m_Drawers.Length; i++)
-        {
-            if (m_Drawers[i] != null)
-            {
-                m_Drawers[i].transform.position = m_DrawerInitPositions[i];
-            }
-        }
-        
+        Reset();
     }
 }

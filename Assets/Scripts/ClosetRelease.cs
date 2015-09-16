@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ClosetRelease : MonoBehaviour, IObjectHolder
+public class ClosetRelease : MonoBehaviour, IObjectHolder, IResetable
 {
     [SerializeField]
     private GameObject[] m_Doors;
@@ -51,6 +51,26 @@ public class ClosetRelease : MonoBehaviour, IObjectHolder
         }
     }
 
+    private void Reset()
+    {
+        if (m_Doors == null || m_DoorInitRotations == null || m_DoorInitRotations.Length != m_Doors.Length)
+        {
+            Debug.Log("m_Doors is null or incompatibile with stored initial values for m_Doors. Cannot initiate reset on ClosetRelease " + GetInstanceID());
+            return;
+        }
+
+        //reset door rotation
+        for (int i = 0; i < m_Doors.Length; i++)
+        {
+            if (m_Doors[i] != null)
+            {
+                m_Doors[i].transform.rotation = m_DoorInitRotations[i];
+            }
+        }
+        // turn collider back on
+        m_CollisionDetector.enabled = true;
+    }
+
     public void OnObjectRelease()
     {
         Debug.Log("ON RELEASE BEHAVIOUR FROM CLOSET CALLED");
@@ -79,24 +99,8 @@ public class ClosetRelease : MonoBehaviour, IObjectHolder
         
     }
 
-
-    public void Reset()
+    public void OnReset()
     {
-        if (m_Doors == null || m_DoorInitRotations == null || m_DoorInitRotations.Length != m_Doors.Length)
-        {
-            Debug.Log("m_Doors is null or incompatibile with stored initial values for m_Doors. Cannot initiate reset on ClosetRelease " + GetInstanceID());
-            return;
-        }
-
-        //reset door rotation
-        for (int i = 0; i < m_Doors.Length; i++)
-        {
-            if (m_Doors[i] != null)
-            {
-                m_Doors[i].transform.rotation = m_DoorInitRotations[i];
-            }
-        }
-        // turn collider back on
-        m_CollisionDetector.enabled = true;
+        Reset();
     }
 }

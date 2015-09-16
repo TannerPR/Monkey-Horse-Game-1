@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ItemHolder : MonoBehaviour, IObjectInteraction
+public class ItemHolder : MonoBehaviour, IObjectInteraction, IResetable
 {
     [SerializeField]
     private RoomObject[] m_ItemsHeld;
@@ -125,5 +125,30 @@ public class ItemHolder : MonoBehaviour, IObjectInteraction
         }
 
         ReleaseItems();
+    }
+
+    public void OnReset()
+    {
+        // reset items
+        IResetable behaviourReset = m_TypeSpecificBehaviour as IResetable;
+        if (behaviourReset != null)
+        {
+            behaviourReset.OnReset();
+        }
+
+        if (m_ItemsHeld != null)
+        {
+            for (int i = 0 ; i < m_ItemsHeld.Length ; i++)
+            {
+                if (m_ItemsHeld[i] != null)
+                {
+                    IResetable itemReset = m_ItemsHeld[i] as IResetable;
+                    if (itemReset != null)
+                    {
+                        itemReset.OnReset();
+                    }
+                }
+            }
+        }
     }
 }

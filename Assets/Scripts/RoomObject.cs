@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class RoomObject : PlayerItem, IObjectInteraction
+public class RoomObject : PlayerItem, IObjectInteraction, IResetable
 {
     [SerializeField]
     private float m_InteractionRange = 0.5f;
@@ -146,4 +146,9 @@ public class RoomObject : PlayerItem, IObjectInteraction
         ActivatedByPlayer(playerCon);
     }
     #endregion
+
+    public void OnReset()
+    {
+        Reset();
+    }
 }

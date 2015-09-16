@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerControl : MonoBehaviour, IObjectInteraction
+public class PlayerControl : MonoBehaviour, IObjectInteraction, IResetable
 {
     [SerializeField]
     private PlayerItem[] m_PlayerItems;
@@ -23,6 +23,8 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
     [SerializeField]
     private float m_MinFlingForce = 0.0f;
 
+    private Vector3 m_InitialPositionOfCenterOfMass;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -38,6 +40,9 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
                 return;
             }
         }
+
+        m_InitialPositionOfCenterOfMass = m_RigidBodyAtCenterOfMass.transform.position;
+
         //lets try without contraints..
         //m_RigidBodyAtCenterOfMass.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 	}
@@ -86,6 +91,23 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
         return foundItems.ToArray();
     }
 
+    private void ResetChildRigidbodies()
+    {
+        Rigidbody[] rbInChildren = GetComponentsInChildren<Rigidbody>();
+        
+        if (rbInChildren != null)
+        {
+            for (int i = 0 ; i < rbInChildren.Length ; i++)
+            {
+                if (rbInChildren[i] != null)
+                {
+                    rbInChildren[i].velocity = Vector3.zero;
+                    rbInChildren[i].angularVelocity = Vector3.zero;
+                }
+            }
+        }
+    }
+
     public void SetItemVisibility(ItemID aItemID, bool aVisible = true)
     {
         PlayerItem item = FindPlayerItem(aItemID);
@@ -119,5 +141,12 @@ public class PlayerControl : MonoBehaviour, IObjectInteraction
     public void OnInteraction(GameObject aPlayer)
     {
         // do nothing :P
+    }
+
+    public void OnReset()
+    {
+        SetAllItemVisibility(false);
+        ResetChildRigidbodies();
+        m_RigidBodyAtCenterOfMass.transform.position = m_InitialPositionOfCenterOfMass;
     }
 }
