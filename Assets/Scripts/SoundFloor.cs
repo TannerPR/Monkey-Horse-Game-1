@@ -14,21 +14,21 @@ public class SoundFloor : MonoBehaviour {
 	
     void OnCollisionEnter(Collision other)
     {
-        //PlayerControl m_PlayerControl = other.transform.root.GetComponent<PlayerControl>();
-        //if (m_PlayerControl == null)
-        //{
-        //    return;
-        //}
-        //
-        //if (other.transform.root.GetComponent<PlayerControl>())
-        //{
-        //    //if (m_AudioSource != null && m_AudioSource.clip != null)
-        //    //{
-        //    if (!m_AudioSource.isPlaying)
-        //    {
-        //        m_AudioSource.PlayOneShot(m_Impact);
-        //    }
-        //    //}
-        //}
+        PlayerControl m_PlayerControl = other.transform.root.GetComponent<PlayerControl>();
+        if (m_PlayerControl == null)
+        {
+            return;
+        }
+        
+        if (other.transform.root.GetComponent<PlayerControl>())
+        {
+            //if (m_AudioSource != null && m_AudioSource.clip != null)
+            //{
+            if (!m_AudioSource.isPlaying)
+            {
+                m_AudioSource.PlayOneShot(m_Impact);
+            }
+            //}
+        }
     }
 }
