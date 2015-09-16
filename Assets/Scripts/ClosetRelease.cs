@@ -22,6 +22,23 @@ public class ClosetRelease : MonoBehaviour, IObjectHolder
     [SerializeField]
     private Collider m_CollisionDetector;
 
+    private Quaternion[] m_DoorInitRotations;
+
+    void Start()
+    {
+        if (m_Doors == null)
+        {
+            m_DoorInitRotations = new Quaternion[m_Doors.Length];
+            for (int i = 0 ; i < m_Doors.Length ; i++)
+            {
+                if (m_Doors[i] != null)
+                {
+                    m_DoorInitRotations[i] = m_Doors[i].transform.rotation;
+                }
+            }
+        }
+
+    }
 
     IEnumerator<YieldInstruction> RotateObject(GameObject aObject, Vector3 aAxis, float aSpeedOfRotation, float aDuration)
     {
@@ -65,9 +82,21 @@ public class ClosetRelease : MonoBehaviour, IObjectHolder
 
     public void Reset()
     {
-        //reset doors and shit
-        //doors
+        if (m_Doors == null || m_DoorInitRotations == null || m_DoorInitRotations.Length != m_Doors.Length)
+        {
+            Debug.Log("m_Doors is null or incompatibile with stored initial values for m_Doors. Cannot initiate reset on ClosetRelease " + GetInstanceID());
+            return;
+        }
 
+        //reset door rotation
+        for (int i = 0; i < m_Doors.Length; i++)
+        {
+            if (m_Doors[i] != null)
+            {
+                m_Doors[i].transform.rotation = m_DoorInitRotations[i];
+            }
+        }
+        // turn collider back on
         m_CollisionDetector.enabled = true;
     }
 }

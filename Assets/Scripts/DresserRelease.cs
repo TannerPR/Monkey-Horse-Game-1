@@ -19,7 +19,24 @@ public class DresserRelease : MonoBehaviour, IObjectHolder
     [SerializeField]
     private float m_DrawerOpenTimeVariance = 0.15f;
 
+    private Vector3[] m_DrawerInitPositions;
 
+
+    void Start()
+    {
+        if (m_Drawers == null)
+        {
+            m_DrawerInitPositions = new Vector3[m_Drawers.Length];
+            for (int i = 0; i < m_Drawers.Length; i++)
+            {
+                if (m_Drawers[i] != null)
+                {
+                    m_DrawerInitPositions[i] = m_Drawers[i].transform.position;
+                }
+            }
+        }
+
+    }
 
     IEnumerator<YieldInstruction> SlideForward(GameObject aObject, float aSpeedOfSlide, float aDuration)
     {
@@ -57,7 +74,20 @@ public class DresserRelease : MonoBehaviour, IObjectHolder
     public void Reset()
     {
         //reset doors and shit
-        //doors
+        if (m_Drawers == null || m_DrawerInitPositions == null || m_DrawerInitPositions.Length != m_Drawers.Length)
+        {
+            Debug.Log("m_Drawers is null or incompatibile with stored initial values for m_Drawers. Cannot initiate reset on DresserRelease " + GetInstanceID());
+            return;
+        }
 
+        //reset drawer position
+        for (int i = 0; i < m_Drawers.Length; i++)
+        {
+            if (m_Drawers[i] != null)
+            {
+                m_Drawers[i].transform.position = m_DrawerInitPositions[i];
+            }
+        }
+        
     }
 }
