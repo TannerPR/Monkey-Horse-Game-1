@@ -22,14 +22,16 @@ public class SoundFloor : MonoBehaviour
         {
             return;
         }
-
-        if (other.transform.root.GetComponent<PlayerControl>())
+        if (other.relativeVelocity.magnitude > 5)
         {
-            if (m_AudioSource != null)
+            if (other.transform.root.GetComponent<PlayerControl>())
             {
-                if (!m_AudioSource.isPlaying)
+                if (m_AudioSource != null)
                 {
-                    m_AudioSource.PlayOneShot(m_Impact[rand]);
+                    if (!m_AudioSource.isPlaying)
+                    {
+                        m_AudioSource.PlayOneShot(m_Impact[rand]);
+                    }
                 }
             }
         }

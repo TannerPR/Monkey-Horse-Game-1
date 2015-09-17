@@ -17,13 +17,16 @@ public class SoundBook : MonoBehaviour
     {
         int rand = Random.Range(0, m_Impact.Length);
 
-        if (other.transform.tag == "floor" || other.transform.tag == "grass" || other.transform.tag == "dresser")
+        if (other.relativeVelocity.magnitude > 5)
         {
-            if (m_AudioSource != null)
+            if (other.transform.tag == "floor" || other.transform.tag == "grass" || other.transform.tag == "dresser")
             {
-                if (!m_AudioSource.isPlaying)
+                if (m_AudioSource != null)
                 {
-                    m_AudioSource.PlayOneShot(m_Impact[rand]);
+                    if (!m_AudioSource.isPlaying)
+                    {
+                        m_AudioSource.PlayOneShot(m_Impact[rand]);
+                    }
                 }
             }
         }
