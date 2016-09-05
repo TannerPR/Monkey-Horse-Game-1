@@ -7,6 +7,10 @@ public class TextureTimer : MonoBehaviour
     public Renderer rend;
     public float timer = 0;
     public Vector2 offset;
+
+    public bool bounce;
+    public bool up;
+
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -14,6 +18,8 @@ public class TextureTimer : MonoBehaviour
     }
     void Update()
     {
+        if (bounce)
+            up = true;
         timer++;
         if (timer >= 50)
         {
@@ -21,6 +27,14 @@ public class TextureTimer : MonoBehaviour
             offset.y = Random.Range(0.1f, 0.9f);
             rend.material.mainTextureOffset = new Vector2(offset.x, offset.y);
             timer = 0;
+            if (up && bounce)
+            {
+                transform.Translate(Vector3.up);
+                bounce = false;
+            }
+            else if(!up && bounce)
+                transform.Translate(Vector3.down);
+                bounce = true;
         }
     }
 }
